@@ -7,6 +7,64 @@
    height: auto;
 }
 
+.gridcontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    f
+}
+h1, h2 {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+}
+p {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+#blackbackground {
+    background: black;
+}
+
+#redbackground {
+    background: red;
+}
+
+#greenbackground {
+    background: green;
+}
+
+#purplebackground {
+    background: purple;
+}
+
+#orangebackground {
+    background: orange;
+}
+
+#bluebackground {
+    background: blue;
+}
+
+#gridcontrols {
+   margin-top: 10px;
+}
+
+#rowsize {
+    max-width: 150px;
+}
+
+#columnsize {
+    max-width: 150px;
+}
+
 .controls {
     display: flex;
     flex-direction: column;
@@ -72,7 +130,8 @@ h1 {
 }
 .content {
 display: flex;
-justify-content: space-evenly;
+justify-content: center;
+gap: 10px;
 }
 .row {
     display: flex;
