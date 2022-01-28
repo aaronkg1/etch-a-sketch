@@ -12,28 +12,28 @@ const backgroundButtons = document.querySelectorAll('.background-button')
 const cssSelector = document.querySelector('link');
 const rainbow = document.querySelector('#rainbow');
 const rowSize = document.querySelector('#rowsize');
-const columnSize = document.querySelector('columnsize');
+const columnSize = document.querySelector('#columnsize');
 const generateButton = document.querySelector('#generate');
 let color;
 
-let rowSizeValue = document.querySelector('#rowsizevalue').textContent;
-let columnSizeValue = document.querySelector('#columnsizevalue').textContent;
 
-function makeGrid(x, y) {
-    for (let i = 0; i < x; i++) {
-        const row = document.createElement('div');
-        row.setAttribute('class', 'row');
-        for (let j = 0; j < y; j++) {
-            const box = document.createElement('div');
-            box.className = 'box';
-            row.appendChild(box);
 
-        }
-        container.appendChild(row);
-    }
-}
+let rowSizeValue = document.querySelector('#rowsizevalue');
+let columnSizeValue = document.querySelector('#columnsizevalue')
 
-// generateButton.addEventListener('click', makeGrid(rowSizeValue, columnSizeValue));
+let updateRow = () => rowSizeValue.innerHTML = rowSize.value;
+
+rowSize.addEventListener('input', updateRow);
+updateRow();
+
+let updateColumn = () => columnSizeValue.innerHTML = columnSize.value;
+
+columnSize.addEventListener('input', updateColumn);
+updateColumn();
+
+
+
+// generateButton.addEventListener('click', makeGrid(rowSize.Value, columnSize.Value));
 
 
 makeGrid(50, 50);
@@ -49,10 +49,10 @@ colorButtons.forEach(button => button.addEventListener('click', (event) => {
     if (event.target.id == 'rainbow') {
         boxes.forEach(box => box.addEventListener('mouseover', randomRgb));
     }
-  
+
     else
         boxes.forEach(box => box.removeEventListener('mouseover', randomRgb));
-        color = event.target.id;
+    color = event.target.id;
 
 
 }));
@@ -64,10 +64,10 @@ backgroundButtons.forEach(button => button.addEventListener('click', (event) => 
         boxes.forEach(box => box.style.background = randomRgb());
     }
 
-    else 
-    
-    boxes.forEach(box => box.style.background = event.target.innerHTML.toLowerCase());
-} )
+    else
+
+        boxes.forEach(box => box.style.background = event.target.innerHTML.toLowerCase());
+})
 )
 
 addEventListener('keydown', (event) => {
@@ -82,6 +82,8 @@ addEventListener('keydown', (event) => {
     else return;
 });
 
+//Functions
+
 function addClass() {
     this.style.background = color;
 };
@@ -94,3 +96,16 @@ function randomRgb() {
 }
 
 
+function makeGrid(x, y) {
+    for (let i = 0; i < x; i++) {
+        const row = document.createElement('div');
+        row.setAttribute('class', 'row');
+        for (let j = 0; j < y; j++) {
+            const box = document.createElement('div');
+            box.className = 'box';
+            row.appendChild(box);
+
+        }
+        container.appendChild(row);
+    }
+}
