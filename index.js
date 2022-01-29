@@ -16,6 +16,7 @@ const generateButton = document.querySelector('#generate');
 const circleButton = document.querySelector('#circle');
 const squareButton = document.querySelector('#square');
 const randomiseButton = document.querySelector('#randomise');
+const surpriseButton = document.querySelector('#surprise');
 let color;
 
 
@@ -81,6 +82,29 @@ randomiseButton.addEventListener('click', () => {
         `${Math.floor(Math.random() * 100 + 1)}%`); 
     
 });
+
+
+surpriseButton.addEventListener('click', () => {
+    container.style.background = `linear-gradient(
+        ${Math.floor(Math.random()*360+1)}deg,
+            rgba(${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, 1) 0%,
+            rgba(${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, 1) 10%,
+            rgba(${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, 1) 20%,
+            rgba(${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, 1) 30%,
+            rgba(${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, 1) 40%,
+            rgba(${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, 1) 50%,
+            rgba(${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, 1) 60%,
+            rgba(${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, 1) 70%,
+            rgba(${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, 1) 80%,
+            rgba(${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, 1) 90%,
+            rgba(${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, ${Math.floor(Math.random()*255+1)}, 1) 100%
+    )`
+    boxes.forEach(box => box.style.borderRadius = '50%');
+    
+});
+
+
+
 };
 
 
