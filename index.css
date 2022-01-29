@@ -257,10 +257,6 @@ gap: 10px;
 font-size: 18px;
 }
 
-
-
-
-
 .button-5 {
   align-items: center;
   background-clip: padding-box;
@@ -315,25 +311,23 @@ font-size: 18px;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    vertical-align: baseline;
-    
+    vertical-align: baseline; 
   }
-  
-
 
 .button-5:hover,
 .button-5:focus {
   background-color: #fb8332;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  box-shadow: rgba(220, 10, 10, 0.1) 0 4px 12px;
 }
 
 .button-5:hover {
   transform: translateY(-1px);
+  box-shadow: rgba(36, 31, 31, 0.276) 0 4px 12px;
 }
 
 .button-5:active {
   background-color: #c85000;
-  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  box-shadow: rgba(133, 128, 128, 0.605) 0 2px 4px;
   transform: translateY(0);
 }
 

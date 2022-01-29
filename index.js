@@ -24,11 +24,13 @@ let clickCounter = 1;
 makeGrid(64);
 initializeEventListeners();
 
-function initializeEventListeners() {
+//Grouped all event listeners into one function so they can be called again when changing grid size.
+function initializeEventListeners() { 
 
 clearButton.addEventListener('click', () => {
     boxes.forEach(box => box.style.background = 'none');
-});
+}); 
+//Clears background styling of all cells.
 
 const boxes = document.querySelectorAll('.box');
 
@@ -57,12 +59,10 @@ backgroundButtons.forEach(button => button.addEventListener('click', (event) => 
 
 
 boxes.forEach(box => box.addEventListener('click', (event) => {
-
     clickCounter += 1;
     if (clickCounter % 2 == 0) {
         boxes.forEach(box => box.removeEventListener('mouseover', addClass));
     }
-
     else boxes.forEach(box => box.addEventListener('mouseover', addClass));
 }));
 
@@ -74,14 +74,11 @@ squareButton.addEventListener('click', () => {
     boxes.forEach(box => box.style.borderRadius = '0'); 
 });
 
-
-
 randomiseButton.addEventListener('click', () => {
     boxes.forEach(box => box.style.borderRadius = 
         `${Math.floor(Math.random() * 100 + 1)}%`); 
     
 });
-
 
 surpriseButton.addEventListener('click', () => {
     container.style.background = `linear-gradient(
@@ -102,12 +99,7 @@ surpriseButton.addEventListener('click', () => {
     
 });
 
-
-
 };
-
-
-
 
 function addClass() {
     this.style.background = color;
@@ -119,7 +111,6 @@ function randomRgb() {
     let blue = Math.floor(Math.random() * 255) + 1;
     return color = `rgb(${red}, ${green}, ${blue})`;
 }
-
 
 function makeGrid(x) {
     container.innerHTML ='';
