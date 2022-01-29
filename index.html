@@ -41,21 +41,13 @@
         </div>
 
         <div class='content' id='gridcontrols'>
-                <div class="gridcontent" id=createrow>
-                    <label for="rowsize">Select Number of Rows</label>
-                    <input type='range' id='rowsize' name='rowsize' min = '0' max = '100' step = '10' value ='50' 
+                <div class="gridcontent" id=creategrid>
+                    <label for="gridsize">Select grid resolution</label>
+                    <input type='range' id='gridsize' name='gridsize' min = '1' max ='100' step = '1' value ='64' 
                     oninput="this.nextElementSibling.value = this.value">
-                    <output id='rowsizevalue'>Test</output>  
+                    <output id='gridsizevalue'>64x64</output>  
                 </div>
-                <div class='gridcontent' id='createcolumn'>
-                    <label for='columnsize'>Select Number of Columns</label>
-                    <input type='range' id='columnsize' name='columnsize' min = '0' max = '100' step = '10' value ='50'
-                    oninput="this.nextElementSibling.value = this.value">
-                    <output id='columnsizevalue'> </output>
-                </div>
-                <div class="gridcontent">
-                    <button class='button-5' id='generate'>Generate</button>
-                </div>
+                
         </div>
 
         <div class="controls">
@@ -66,5 +58,20 @@
             </div>
         </div>
     </div>
+
+    <table style='width 100'> 
+        <tr>
+            <th>a</th>
+        </tr>
+        <tr>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+        </tr>
+    </table>
 </body>
 </html>

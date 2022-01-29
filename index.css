@@ -1,10 +1,32 @@
 #container {
    border: solid black 10px;
    min-width: 500px;
-   min-height: 500px
-   max-height: 1000px;
-   max-width: 1000px;
-   height: auto;
+   min-height: 500px;
+   max-height: 500px;
+   max-width: 500px;
+   height: 500px;
+   width: 500px;
+   display: table;
+    
+}
+
+.box {
+    min-width: 5px;
+    min-height: 5px;
+    max-width: 500px;
+    max-width: 500px;
+    flex-flow: column;
+    flex: 1;
+    overflow: auto;
+    justify-self: stretch;
+    display: table-cell;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-items: stretch;
+    display: table-row;
 }
 
 .gridcontent {
@@ -63,6 +85,10 @@ p {
 
 #columnsize {
     max-width: 150px;
+}
+
+#gridsizevalue {
+    text-align: center;
 }
 
 .controls {
@@ -132,20 +158,10 @@ h1 {
 display: flex;
 justify-content: center;
 gap: 10px;
-}
-.row {
-    display: flex;
-    flex-direction: row;
+font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
 
-.box {
-    width: 10px;
-    height: 10px;
-    min-width: 8px;
-    min-height: 8px;
-    max-width: 50px;
-    max-width: 50px;
-}
+
 
 
 
