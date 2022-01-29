@@ -1,25 +1,36 @@
-#container {
-   border: solid black 10px;
-   min-width: 500px;
-   min-height: 500px;
-   max-height: 500px;
-   max-width: 500px;
-   height: 500px;
-   width: 500px;
-   display: table;
+body {
+    font-family: 'Mochiy Pop P One', sans-serif;
+    text-align: center;
 }
 
+#container {
+   border: solid rgb(24, 168, 220) 2px;
+   min-width: 700px;
+   min-height: 700px;
+   max-height: 700px;
+   max-width: 700px;
+   height: 700px;
+   width: 700px;
+   display: table;
+}
+.box:hover {
+    background: rgb(73, 152, 194);
+}
 .box {
     min-width: 5px;
     min-height: 5px;
-    max-width: 500px;
-    max-width: 500px;
+    max-width: 700px;
+    max-width: 700px;
     flex-flow: column;
     flex: 1;
     overflow: auto;
     justify-self: stretch;
     display: table-cell;
+    border: solid rgba(178, 182, 182, 0.214) 0.2px;
 }
+
+
+
 .row {
     display: flex;
     flex-direction: row;
@@ -43,13 +54,12 @@
     justify-content: center;
     f
 }
-h1, h2 {
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    text-align: center;
+
+
+h1 {
+    font-size: 50px;
 }
-p {
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-}
+  
 #blackbackground {
     background: black;
     flex: 1;
@@ -111,6 +121,7 @@ p {
         rgba(251, 7, 217, 1) 90%,
         rgba(255, 0, 0, 1) 100%
     );
+    flex: 1;
 }
 
 .controls {
@@ -165,6 +176,36 @@ p {
     flex: 1;
 }
 
+#yellow {
+    background-color: yellow;
+    color: black;
+    flex: 1;
+}
+
+#none {
+    background: linear-gradient(
+        90deg,
+        rgba(33, 192, 220, 0.639) 0%,
+        rgb(33, 192, 220, 0.639) 10%,
+        rgb(33, 192, 220, 0.639) 20%,
+        rgba(33, 192, 220, 0.639) 30%,
+        rgba(33, 192, 220, 0.639) 40%,
+        rgba(33, 192, 220, 0.639) 50%,
+        rgba(33, 192, 220, 0.639) 60%,
+        rgba(33, 192, 220, 0.639) 70%,
+        rgba(33, 192, 220, 0.639) 77%,
+        rgb(5, 8, 12) 79%,
+        rgba(250, 90, 133, 0.564) 80%,
+        rgba(250, 90, 133, 0.564) 90%,
+        rgba(250, 90, 133, 0.564) 100%
+        
+    );
+
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 10px;
+    flex: 1;
+}
+
 #rainbow {
     background: linear-gradient(
         90deg,
@@ -180,6 +221,31 @@ p {
         rgba(251, 7, 217, 1) 90%,
         rgba(255, 0, 0, 1) 100%
     );
+    flex: 1;
+}
+
+#circle {
+    border-radius: 100%;
+    background: rgba(13, 228, 13, 0.44);
+}
+
+#square {
+    border-radius: 0;
+    width: 90px;
+    height: 90px;
+    background: rgba(13, 224, 228, 0.44);
+}
+
+#randomise {
+    background: rgba(181, 13, 228, 0.44);
+    width: 120px;
+    height: 90px;
+}
+
+#surprise {
+    background: rgba(228, 13, 70, 0.44);
+    width: 120px;
+    height: 90px;
 }
 h1 {
     text-align: center;
@@ -188,7 +254,7 @@ h1 {
 display: flex;
 justify-content: center;
 gap: 10px;
-font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+font-size: 18px;
 }
 
 
@@ -206,7 +272,7 @@ font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   color: #fff;
   cursor: pointer;
   display: inline-flex;
-  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Mochiy Pop P One', sans-serif;
   font-size: 16px;
   font-weight: 600;
   justify-content: center;
@@ -235,7 +301,7 @@ font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     color: #fff;
     cursor: pointer;
     display: inline-flex;
-    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Mochiy Pop P One', sans-serif;
     font-size: 16px;
     font-weight: 600;
     justify-content: center;
@@ -250,7 +316,7 @@ font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     -webkit-user-select: none;
     touch-action: manipulation;
     vertical-align: baseline;
-    width: auto;
+    
   }
   
 

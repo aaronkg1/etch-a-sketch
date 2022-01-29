@@ -18,6 +18,7 @@ const squareButton = document.querySelector('#square');
 const randomiseButton = document.querySelector('#randomise');
 const surpriseButton = document.querySelector('#surprise');
 let color;
+let clickCounter = 1;
 
 
 makeGrid(64);
@@ -26,7 +27,7 @@ initializeEventListeners();
 function initializeEventListeners() {
 
 clearButton.addEventListener('click', () => {
-    boxes.forEach(box => box.style.background = 'white');
+    boxes.forEach(box => box.style.background = 'none');
 });
 
 const boxes = document.querySelectorAll('.box');
@@ -37,8 +38,9 @@ colorButtons.forEach(button => button.addEventListener('click', (event) => {
     }
 
     else
-        boxes.forEach(box => box.removeEventListener('mouseover', randomRgb));
+        boxes.forEach(box => box.removeEventListener('mouseover', (randomRgb)));
     color = event.target.id;
+
 
 }));
 
@@ -51,21 +53,18 @@ backgroundButtons.forEach(button => button.addEventListener('click', (event) => 
     else
 
         boxes.forEach(box => box.style.background = event.target.innerHTML.toLowerCase());
-})
-)
-addEventListener('keydown', (event) => {
-    if (event.code == 'Space') {
+}));
+
+
+boxes.forEach(box => box.addEventListener('click', (event) => {
+
+    clickCounter += 1;
+    if (clickCounter % 2 == 0) {
         boxes.forEach(box => box.removeEventListener('mouseover', addClass));
     }
 
-    else if (event.code == 'KeyD') {
-        boxes.forEach(box => box.addEventListener('mouseover', addClass));
-    }
-
-    else return;
-
-    
-});
+    else boxes.forEach(box => box.addEventListener('mouseover', addClass));
+}));
 
 circleButton.addEventListener('click', () => {
     boxes.forEach(box => box.style.borderRadius = '50%'); 
