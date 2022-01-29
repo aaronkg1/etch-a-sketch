@@ -13,6 +13,9 @@ const cssSelector = document.querySelector('link');
 const rainbow = document.querySelector('#rainbow');;
 const gridSize = document.querySelector('#gridsize');
 const generateButton = document.querySelector('#generate');
+const circleButton = document.querySelector('#circle');
+const squareButton = document.querySelector('#square');
+const randomiseButton = document.querySelector('#randomise');
 let color;
 
 
@@ -59,8 +62,28 @@ addEventListener('keydown', (event) => {
     }
 
     else return;
+
+    
+});
+
+circleButton.addEventListener('click', () => {
+    boxes.forEach(box => box.style.borderRadius = '50%'); 
+});
+
+squareButton.addEventListener('click', () => {
+    boxes.forEach(box => box.style.borderRadius = '0'); 
+});
+
+
+
+randomiseButton.addEventListener('click', () => {
+    boxes.forEach(box => box.style.borderRadius = 
+        `${Math.floor(Math.random() * 100 + 1)}%`); 
+    
 });
 };
+
+
 
 
 function addClass() {
