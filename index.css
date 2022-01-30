@@ -507,6 +507,14 @@ padding-bottom: 50px;
             max-width: 200px;
             justify-content: center;
             align-content: center;
+            align-self: center;
+  
+        }
+        .centerpage {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
             
         }
         
