@@ -21,6 +21,7 @@ let color;
 let clickCounter = 1;
 
 
+
 makeGrid(64);
 initializeEventListeners();
 
@@ -59,11 +60,13 @@ backgroundButtons.forEach(button => button.addEventListener('click', (event) => 
 
 
 boxes.forEach(box => box.addEventListener('click', (event) => {
+    if (screen.width > 480) {
+
     clickCounter += 1;
     if (clickCounter % 2 == 0) {
         boxes.forEach(box => box.removeEventListener('mouseover', addClass));
-    }
-    else boxes.forEach(box => box.addEventListener('mouseover', addClass));
+    }  else boxes.forEach(box => box.addEventListener('mouseover', addClass));
+} else return;
 }));
 
 circleButton.addEventListener('click', () => {
