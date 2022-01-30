@@ -50,7 +50,7 @@ colorButtons.forEach(button => button.addEventListener('click', (event) => {
 }));
 
 if (screen.width < 480) {
-    boxes.forEach(box => box.addEventListener('touchmove', addClass,)); 
+    boxes.forEach(box => box.addEventListener('touchstart', addClass,)); 
 }
 else {boxes.forEach(box => box.addEventListener('mouseover', addClass,));
 }
