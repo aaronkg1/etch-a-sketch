@@ -352,3 +352,162 @@ font-size: 18px;
 .footer p {
     font-size: 10px;
 }
+
+@media screen and (max-width: 480px) {
+    #container {
+        border: solid rgb(24, 168, 220) 2px;
+        min-width: 250px;
+        min-height: 250px;
+        max-height: 250px;
+        max-width: 250px;
+        height: 250px;
+        width: 250px;
+        display: table;
+     }
+
+     .box {
+        min-width: 1px;
+        min-height: 1px;
+        max-width: 250px;
+        max-width: 250px;
+        flex-flow: column;
+        flex: 1;
+        overflow: auto;
+        justify-self: stretch;
+        display: table-cell;
+        border: solid rgba(178, 182, 182, 0.214) 0.2px;
+    }
+
+    #main-content {
+        max-height: 400px;
+    }
+
+    .button-5 {
+        align-items: center;
+        background-clip: padding-box;
+        background-color: #fa6400;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: 'Mochiy Pop P One', sans-serif;
+        font-size: 5px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 1.25;
+        margin: 0;
+        min-height: 1rem;
+        padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+        position: relative;
+        text-decoration: none;
+        transition: all 250ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: baseline;
+        width: auto;
+      }
+      
+      .button-6 {
+          align-items: center;
+          background-clip: padding-box;
+          background-color: #14e974;
+          border: 1px solid transparent;
+          border-radius: .25rem;
+          box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+          box-sizing: border-box;
+          color: #fff;
+          cursor: pointer;
+          display: inline-flex;
+          font-family: 'Mochiy Pop P One', sans-serif;
+          font-size: 5px;
+          font-weight: 600;
+          justify-content: center;
+          line-height: 1.25;
+          margin: 0;
+          min-height: 3rem;
+          padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+          position: relative;
+          text-decoration: none;
+          transition: all 250ms;
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+          vertical-align: baseline; 
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            max-height: 200px;
+            max-width: 60px;
+            align-self: flex-end;
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+        .content {
+        
+        }
+
+        #header {
+padding-bottom: 50px;
+        }
+
+        #circle {
+            border-radius: 100%;
+            background: rgba(13, 228, 13, 0.44);
+            height: 60px;
+            width: 60px;
+        }
+        
+        #square {
+            border-radius: 0;
+            width: 60px;
+            height: 60px;
+            background: rgba(13, 224, 228, 0.44);
+        }
+        
+        #randomise {
+            background: rgba(181, 13, 228, 0.44);
+            width: 70px;
+            height: 40px;
+        }
+        
+        #surprise {
+            background: rgba(228, 13, 70, 0.44);
+            width: 70px;
+            height: 40px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+    
+        }
+
+        label {
+            font-size: 10px;
+        }
+
+        #gridcontrols {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 200px;
+            justify-content: center;
+            align-content: center;
+            
+        }
+        
+}
