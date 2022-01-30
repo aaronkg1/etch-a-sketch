@@ -28,6 +28,8 @@ initializeEventListeners();
 //Grouped all event listeners into one function so they can be called again when changing grid size.
 function initializeEventListeners() { 
 
+    
+
 clearButton.addEventListener('click', () => {
     boxes.forEach(box => box.style.background = 'none');
 }); 
@@ -47,7 +49,12 @@ colorButtons.forEach(button => button.addEventListener('click', (event) => {
 
 }));
 
-boxes.forEach(box => box.addEventListener('mouseover', addClass,));
+if (screen.width < 480) {
+    boxes.forEach(box => box.addEventListener('touchmove', addClass,)); 
+}
+else {boxes.forEach(box => box.addEventListener('mouseover', addClass,));
+}
+
 
 backgroundButtons.forEach(button => button.addEventListener('click', (event) => {
     if (event.target.id == 'rainbowbackground') {
@@ -60,7 +67,7 @@ backgroundButtons.forEach(button => button.addEventListener('click', (event) => 
 
 
 boxes.forEach(box => box.addEventListener('click', (event) => {
-    if (screen.width > 480) {
+    if (screen.width > 480) { //for mobile compatibility
 
     clickCounter += 1;
     if (clickCounter % 2 == 0) {
